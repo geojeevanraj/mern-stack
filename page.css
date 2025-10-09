@@ -1,0 +1,43 @@
+.one{
+    justify-content: space-evenly;
+    padding: 20px;
+}
+
+.nav{
+    display: flex;
+    justify-content: space-around;
+    background-color: rgba(31, 41, 55);
+    color: white;
+}
+
+.head{
+    display: flex;
+    justify-content: space-evenly;
+}
+
+li{
+    list-style: none;
+    padding: 10px;
+}
+
+.nav h1{
+    text-align: right;
+    padding-right: 55%;
+}
+
+.pro h1{
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.button button{
+    background-color: blue;
+    border-radius: 25px;
+    color: white;
+    width: 100px;
+    height: 40px;
+    border-style: none;
+}
+.button button:hover{
+    background-color: rgb(0, 0, 139);
+    cursor: pointer;
+}
