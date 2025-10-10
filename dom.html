@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .s button{
+            width: 100px;
+            height: 50px;
+            background-color: blue;
+            font-family: arial;
+            color: white;
+            font-size: 20px;
+            border-radius: 20px;
+            border-color: aliceblue;
+        }
+        .s h1{
+            color: rgb(128, 79, 0);
+            font-family: verdana;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="s">
+    <h1 id="change">Click this button to know your future</h1>
+    <center><button onclick="changeText()">Button</button></center>
+    <script>
+        function changeText(){
+            document.getElementById("change").innerHTML='Unemployment';
+        }
+    </script>
+    </div>
+</body>
+</html>
