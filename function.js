@@ -73,3 +73,7 @@
 // let num = [...a,8,12];
 // console.log(num);
 
+let obj1 = {x: 1, y: 2};
+let obj2 = {z: 3, w: 4};
+let spread = {...obj1, ...obj2};
+console.log(spread);
