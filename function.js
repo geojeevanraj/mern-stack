@@ -73,7 +73,26 @@
 // let num = [...a,8,12];
 // console.log(num);
 
-let obj1 = {x: 1, y: 2};
-let obj2 = {z: 3, w: 4};
-let spread = {...obj1, ...obj2};
-console.log(spread);
+// let obj1 = {x: 1, y: 2};
+// let obj2 = {z: 3, w: 4};
+// let spread = {...obj1, ...obj2};
+// console.log(spread);
+
+// const promise = new Promise((resolve, reject) => {
+//     setTimeout(() => {
+//     const success = true;
+//     if (success) {
+//         resolve("Promise resolved successfully!");
+//     } else {
+//         reject("Promise rejected.");
+//     }
+// },2000);
+// });
+
+// promise
+//     .then(result => console.log(result))
+//     .catch(error => console.log(error));
+
+fetch('https://jsonplaceholder.typicode.com/posts/1')
+  .then((response) => response.json())
+  .then((json) => console.log(json));
