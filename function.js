@@ -93,6 +93,17 @@
 //     .then(result => console.log(result))
 //     .catch(error => console.log(error));
 
-fetch('https://jsonplaceholder.typicode.com/posts/1')
-  .then((response) => response.json())
-  .then((json) => console.log(json));
+// fetch('https://jsonplaceholder.typicode.com/users/1')
+//   .then((response) => response.json())
+//   .then((json) => console.log(json));
+
+//   let obj1 = {name: 'virat', age: 38, country: 'India'};
+//     let {name, age, country} = obj1;
+//     console.log(name, age, country);
+
+
+// string
+
+let name = 'geo';
+let age = 20;
+console.log(`My name is ${name} and I am ${age} years old.`);
