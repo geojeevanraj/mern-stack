@@ -40,6 +40,10 @@
 // let evenArr = arr.filter(isEven);
 // console.log(evenArr);
 
-let array = [13,15,20,25,27];
-const multiply = (x) => x * 5;
-console.log(array.map(multiply));
+// let array = [13,15,20,25,27];
+// const multiply = (x) => x * 5;
+// console.log(array.map(multiply));
+
+let array1 = [1,2,3,4,5,6];
+let sum = array1.reduce((product, current) => product * current, 1);
+console.log(sum);
