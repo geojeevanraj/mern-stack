@@ -44,6 +44,32 @@
 // const multiply = (x) => x * 5;
 // console.log(array.map(multiply));
 
-let array1 = [1,2,3,4,5,6];
-let sum = array1.reduce((product, current) => product * current, 1);
-console.log(sum);
+// let array1 = [1,2,3,4,5,6];
+// let sum = array1.reduce((product, current) => product * current, 1);
+// console.log(sum);
+
+//sum of even triple numbers
+// let arr = [1,2,3,4,5,6];
+// let tripledArr = arr.map(num => num * 3);
+// let evenArr = tripledArr.filter(num => num % 2 === 0);
+// let sumOfEvenTriple = evenArr.reduce((sum, current) => sum + current, 0);
+// console.log(sumOfEvenTriple);
+
+
+
+// let arr = [1,2,3,4];
+// const [one, two] = arr;
+// console.log(two);
+
+// let b = [1,2,3,4];
+// const [ome, ... two] = b
+// console.log(two);
+
+//spread
+
+// let a = [1,2,3,4];
+// const [one, ... two] = a;
+// console.log(two);
+// let num = [...a,8,12];
+// console.log(num);
+
