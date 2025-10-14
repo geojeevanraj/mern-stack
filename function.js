@@ -110,17 +110,25 @@
 
 //stack
 
-const mul = (a,b) => {
-    return a * b;
-}
+// const mul = (a,b) => {
+//     return a * b;
+// }
 
-const square = (num) => {
-    return mul(num, num);
-}
+// const square = (num) => {
+//     return mul(num, num);
+// }
 
-const print = (num) => {
-    let s = square(num);
-    console.log(s);
-}
-print(4);
-print(5);
+// const print = (num) => {
+//     let s = square(num);
+//     console.log(s);
+// }
+// print(4);
+// print(5);
+
+console.log('first');
+Promise.resolve().then(console.log('from promise'));
+setTimeout(() => {
+    console.log('from setTimeout');
+},2000);
+
+console.log('last');
