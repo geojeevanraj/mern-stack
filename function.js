@@ -104,6 +104,23 @@
 
 // string
 
-let name = 'geo';
-let age = 20;
-console.log(`My name is ${name} and I am ${age} years old.`);
+// let name = 'geo';
+// let age = 20;
+// console.log(`My name is ${name} and I am ${age} years old.`);
+
+//stack
+
+const mul = (a,b) => {
+    return a * b;
+}
+
+const square = (num) => {
+    return mul(num, num);
+}
+
+const print = (num) => {
+    let s = square(num);
+    console.log(s);
+}
+print(4);
+print(5);
