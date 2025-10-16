@@ -12,16 +12,12 @@ const App = () => {
     <>
       
       <Navbar />
-      <State />
       <Routes>
         <Route path='/' Component={Home}>Home</Route>
         <Route path='/about' Component={About}>About</Route>
         <Route path='/contact' Component={Contact}>Contact</Route>
-        <Route path='/state' element={<h1>State</h1>}>State</Route>
+        <Route path='/state' element={<State />}>State</Route>
       </Routes>
-
-      <User name="Geo" department="AIML"
-      skills = {["HTML", "CSS", "JS"]} />
 
     </>
   )
