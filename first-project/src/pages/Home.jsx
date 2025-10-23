@@ -8,6 +8,8 @@ const Home = () => {
       <ul>
         <li>
           <Link to = '/state'>useState</Link>
+          <br />
+          <Link to='/effect'>useEffect</Link>
         </li>
       </ul>
       {/* <User name="Geo" department="AIML" skills={["HTML", "CSS", "JS"]} /> */}
