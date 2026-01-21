@@ -4,7 +4,7 @@ const mongoose=require('mongoose');
 
 app.use(express.json());
 
-mongoose.connect('mongodb+srv://geo:password987@mern.k8h5syg.mongodb.net/?appName=mern',
+mongoose.connect(process.env.MONGO_URL,
 ).then(()=>{
     console.log('Connected to MongoDB');
 }).catch((err)=>{
