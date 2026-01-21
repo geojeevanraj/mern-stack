@@ -13,6 +13,10 @@ mongoose.connect(process.env.MONGO_URL,
     console.error('Error connecting to MongoDB',err);
 });
 
+app.use('/api/auth', require('./routes/authRoutes'));
+app.use('/api/tasks', require('./routes/taskRoutes'));
+
+
 app.get('/api',(req,res)=>{
     res.send('from express');
 });
@@ -25,3 +29,5 @@ app.post('/api',(req,res)=>{
 app.listen(3000,()=>{
     console.log('Server is running on port 3000');
 });
+
+
