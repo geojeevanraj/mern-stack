@@ -6,16 +6,32 @@ const dotenv=require('dotenv');
 dotenv.config();
 app.use(express.json());
 
+// CORS middleware
+app.use((req, res, next) => {
+    res.header('Access-Control-Allow-Origin', '*');
+    res.header('Access-Control-Allow-Headers', 'Origin, X-Requested-With, Content-Type, Accept, Authorization');
+    res.header('Access-Control-Allow-Methods', 'GET, POST, PUT, PATCH, DELETE, OPTIONS');
+    if (req.method === 'OPTIONS') {
+        return res.sendStatus(200);
+    }
+    next();
+});
+
 mongoose.connect(process.env.MONGO_URL,
 ).then(()=>{
     console.log('Connected to MongoDB');
 }).catch((err)=>{
     console.error('Error connecting to MongoDB',err);
+    process.exit(1);
 });
 
 app.use('/api/auth', require('./routes/authRoutes'));
 app.use('/api/tasks', require('./routes/taskRoutes'));
 
+
+app.get('/',(req,res)=>{
+    res.json({ message: 'Backend API is running', status: 'success' });
+});
 
 app.get('/api',(req,res)=>{
     res.send('from express');
@@ -26,8 +42,9 @@ app.post('/api',(req,res)=>{
     res.send(temp);
 })
 
-app.listen(3000,()=>{
-    console.log('Server is running on port 3000');
+const PORT = process.env.PORT || 3000;
+app.listen(PORT,()=>{
+    console.log(`Server is running on port ${PORT}`);
 });
 
 
