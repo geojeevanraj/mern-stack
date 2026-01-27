@@ -5,6 +5,7 @@ const dotenv=require('dotenv');
 
 dotenv.config();
 app.use(express.json());
+// app.use(cors())
 
 // CORS middleware
 app.use((req, res, next) => {

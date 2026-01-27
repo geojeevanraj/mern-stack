@@ -1,0 +1,41 @@
+import React from 'react'
+import { useState } from 'react'
+const Form = () => {
+    const [form, setForm] = useState({
+        name: "",
+        email:"",
+        age:"",
+        dept:""
+    })
+const handleChange=(e) => {
+    const {name,value} = e.target
+    setForm((prev)=>({
+        ...prev, //spread operator
+        [name] : value
+    }))
+}
+const handleSubmit=(e) => {
+    e.preventDefault()
+    console.log(form)
+}
+
+  return (
+    <div>
+        <form onSubmit={handleSubmit}>
+            <label htmlFor="name">Name:</label>
+            <input type="text" name="name" value={form.name} onChange={handleChange}/>
+            <label htmlFor="email">Email:</label>
+            <input type="email" name="email" value={form.email} onChange={handleChange}/>
+            <label htmlFor="age">Age:</label>
+            <input type="number" name="age" value={form.age} onChange={handleChange}/>
+            <label htmlFor="dept">Department:</label>
+            <input type="text" name="dept" value={form.dept} onChange={handleChange}/>
+        <button type="submit">Submit</button>
+        </form>
+        
+
+    </div>
+  )
+}
+
+export default Form
